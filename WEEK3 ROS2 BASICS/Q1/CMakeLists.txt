@@ -3,4 +3,16 @@ project(kratos_srushti)
 
 find_package(ament_cmake REQUIRED)
 
+install(
+  PROGRAMS
+    src/rover_status_publisher.py
+    src/rover_status_subscriber.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_package()
